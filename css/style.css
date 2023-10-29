@@ -18,7 +18,7 @@
 }
 
 .header {
-    background-image: url(/images/banner-bg.jpg);
+    background-image: url("../images/banner-bg.jpg");
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -120,7 +120,7 @@
     justify-content: end;
     width: 25%;
     background-size: cover;
-    background-image: url(/images/trend1.jpg);
+    background-image: url("../images/trend1.jpg");
     background-repeat: no-repeat;
     position: relative;
     z-index: 0;
@@ -128,19 +128,19 @@
 }
 
 .popular-post_plants {
-    background-image: url(/images/trend1.jpg);
+    background-image: url("../images/trend1.jpg");
 }
 
 .popular-post_cheeses {
-    background-image: url(/images/trend2.jpg);
+    background-image: url("../images/trend2.jpg");
 }
 
 .popular-post_mountains {
-    background-image: url(/images/trend3.jpg);
+    background-image: url("../images/trend3.jpg");
 }
 
 .popular-post_lemons {
-    background-image: url(/images/trend4.jpg);
+    background-image: url("../images/trend4.jpg");
 }
 
 .popular-post:not(:last-child) {
@@ -411,7 +411,7 @@
     left: 223px;
     background-color: #b59f5b;
     border: none;
-    background-image: url("/svg/search.svg");
+    background-image: url("../svg/search.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 18px;
@@ -721,7 +721,7 @@
 }
 
 .social-dribbble {
-    background-image: url("/svg/001-dribbble.svg");
+    background-image: url("../svg/001-dribbble.svg");
     background-size: 20px 20px;
     background-repeat: no-repeat;
     position: relative;
@@ -730,7 +730,7 @@
 }
 
 .social-pinterest {
-    background-image: url("/svg/001-pinterest.svg");
+    background-image: url("../svg/001-pinterest.svg");
     background-size: 20px 20px;
     background-repeat: no-repeat;
     position: relative;
@@ -739,7 +739,7 @@
 }
 
 .social-tumblr {
-    background-image: url("/svg/003-tumblr.svg");
+    background-image: url("../svg/003-tumblr.svg");
     background-size: 20px 20px;
     background-repeat: no-repeat;
     position: relative;
@@ -780,7 +780,7 @@
 }
 
 .cross {
-    background-image: url("/svg/form-x.svg");
+    background-image: url("../svg/form-x.svg");
     background-repeat: no-repeat;
     cursor: pointer;
     position: absolute;
@@ -849,7 +849,7 @@
     border: none;
     background-color: #f4f7f6;
     border-radius: 0%;
-    background-image: url("/svg/form-arrows.svg");
+    background-image: url("../svg/form-arrows.svg");
     background-repeat: no-repeat;
     background-position: right 15px center;
     background-size: 7px 17px;
@@ -896,7 +896,7 @@
     width: 18px;
     height: 18px;
     background-size: 18px 18px;
-    background-image: url("/svg/form-empty-circle.svg");
+    background-image: url("../svg/form-empty-circle.svg");
 }
 
 .radio-title::before {
@@ -904,7 +904,7 @@
 }
 
 .radio:checked+.radio-title::before {
-    background-image: url("/svg/form-circle.svg");
+    background-image: url("../svg/form-circle.svg");
     width: 18px;
     height: 18px;
     background-size: 18px 18px;
@@ -972,7 +972,7 @@
     }
 
     .header {
-        background-image: url("/images/banner-bg-tablet.jpg");
+        background-image: url("../images/banner-bg-tablet.jpg");
     }
 
     .logo-menu {
@@ -992,7 +992,7 @@
     }
 
     .logo-menu nav {
-        background-image: url("/svg/burger-menu-svgrepo-com.svg");
+        background-image: url("../svg/burger-menu-svgrepo-com.svg");
         width: 33px;
         height: 29px;
         display: block;
@@ -1119,7 +1119,7 @@
     }
 
     .header {
-        background-image: url("/images/banner-mobile.jpg");
+        background-image: url("../images/banner-mobile.jpg");
     }
 
     .logo-menu {
@@ -1143,7 +1143,7 @@
     }
 
     .logo-menu nav {
-        background-image: url("/svg/burger-menu-svgrepo-com.svg");
+        background-image: url("../svg/burger-menu-svgrepo-com.svg");
         width: 33px;
         height: 29px;
         display: block;
