@@ -25,6 +25,8 @@
     position: relative;
     background-repeat: no-repeat;
     z-index: 0;
+    padding-top: 28px;
+    padding-bottom: 145px;
 }
 
 .header:before {
@@ -34,6 +36,7 @@
     width: 100%;
     height: 100%;
     display: block;
+    top: 0;
 }
 
 .logo-menu {
@@ -41,7 +44,7 @@
     display: flex;
     position: relative;
     max-width: 1170px;
-    padding: 28px 15px 0 15px;
+    padding: 0 15px 0 15px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -53,12 +56,12 @@
     width: 179px;
 }
 
-.menu li {
+.menu .menu__element {
     display: inline;
     list-style-type: none;
 }
 
-.menu a {
+.menu .menu__link {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 13px;
@@ -66,16 +69,15 @@
     font-family: OpenSans-Regular, sans-serif;
 }
 
-.menu a:hover {
+.menu .menu__link:hover {
     text-decoration: underline;
 }
 
-.menu li:nth-of-type(n + 2) {
+.menu .menu__element:nth-of-type(n + 2) {
     margin-left: 33px;
 }
 
 .intro {
-    padding-bottom: 145px;
     margin: 125px auto 0;
     text-align: center;
     color: #ffffff;
@@ -169,39 +171,37 @@
     list-style-type: none;
 }
 
-.links-popular a {
+.popular-element:not(:last-child) {
+    margin-right: 18px;
+}
+
+.links-popular .link-popular-post {
     text-decoration: none;
     color: #b59f5b;
-    margin-right: 18px;
     font-family: OpenSans-Bold, sans-serif;
     font-size: 14px;
 }
 
-.links-popular a:hover {
+.links-popular .link-popular-post:hover {
     text-decoration: underline
 }
 
 .popular-post-title {
+    margin-top: 10px;
+}
+
+.title-popular-link {
+    text-decoration: none;
+}
+
+.title-popular-link {
     font-family: OpenSans-Bold, sans-serif;
     color: #ffffff;
-    margin-top: 10px;
     font-size: 20px;
 }
 
-.popular-post-title_plants {
-    max-width: 286px;
-}
-
-.popular-post-title_cheeses {
-    max-width: 350px;
-}
-
-.popular-post-title_mountains {
-    max-width: 300px;
-}
-
-.popular-post-title_lemons {
-    max-width: 350px;
+.title-popular-link:hover {
+    color: #b59f5b;
 }
 
 .container {
@@ -250,15 +250,15 @@
     margin-bottom: 15px;
 }
 
-.links-category li:not(:first-of-type) {
+.links-category .links-category__element:not(:first-of-type) {
     margin-left: 19px;
 }
 
-.links-category li {
+.links-category .links-category__element {
     list-style-type: none;
 }
 
-.links-category a {
+.links-category .links-category__link {
     text-decoration: none;
     text-transform: uppercase;
     font-family: OpenSans-Bold, sans-serif;
@@ -266,7 +266,7 @@
     font-size: 14px;
 }
 
-.links-category a:hover {
+.links-category .links-category__link:hover {
     text-decoration: underline;
 }
 
@@ -292,7 +292,7 @@
     margin-bottom: 52px;
 }
 
-.date-author time {
+.date-author .time-category {
     font-family: OpenSans-Regular, sans-serif;
     font-size: 12px;
     color: #888888;
@@ -381,13 +381,8 @@
 .post-title {
     font-size: 14px;
     font-family: OpenSans-Bold, sans-serif;
-    max-width: 191px;
     line-height: 1.2;
     text-transform: uppercase;
-}
-
-.post-title-cooking {
-    max-width: 161px;
 }
 
 .post-link {
@@ -408,34 +403,34 @@
     width: 48px;
     height: 48px;
     position: absolute;
-    left: 223px;
     background-color: #b59f5b;
     border: none;
     background-image: url("../svg/search.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 18px;
+    right: 0;
 }
 
 .search-button:hover {
     background-color: #323232;
 }
 
-.search input {
-    width: 272px;
+.search .search-input-information {
+    width: 100%;
     height: 48px;
-    padding: 18px 0 18px 19px;
+    padding: 18px calc(19px + 48px) 18px 19px;
     box-sizing: border-box;
     background-color: #f4f7f6;
     border: none;
 }
 
-.search input:focus+.search-button {
+.search .search-input-information:focus+.search-button {
     visibility: visible;
     outline: 1px solid #b59f5b;
 }
 
-.search input:focus {
+.search .search-input-information:focus {
     visibility: visible;
     outline: 1px solid #b59f5b;
     outline-offset: 0px;
@@ -449,9 +444,9 @@
 
 .email-input {
     display: flex;
-    width: 272px;
+    width: 100%;
     height: 46px;
-    padding: 16px 0 16px 20px;
+    padding: 16px 20px 16px 20px;
     box-sizing: border-box;
     background-color: #f4f7f6;
     font-family: OpenSans-Regular, sans-serif;
@@ -468,7 +463,7 @@
 }
 
 .subscribe-button {
-    width: 272px;
+    width: 100%;
     height: 49px;
     background-color: #b59f5b;
     color: #ffffff;
@@ -486,7 +481,6 @@
 .tags-cards {
     margin-top: 24px;
     margin-bottom: 61px;
-    max-width: 370px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -496,17 +490,17 @@
     color: #0f0d0e;
 }
 
-.tags-cards li {
+.tags-cards .tag-card-element {
     list-style-type: none;
     border: 3px solid #eeeeee;
     padding: 8px 12px;
     font-family: OpenSans-Bold, sans-serif;
     font-size: 12px;
     text-transform: uppercase;
-    margin: 6px 5px;
+    margin: 0 5px 6px 0;
 }
 
-.tags-cards li:hover {
+.tags-cards .tag-card-element:hover {
     border: 3px solid #b59f5b;
 }
 
@@ -519,45 +513,41 @@
     position: relative;
 }
 
-.list-column a {
+.list-column .list-column__link {
     text-decoration: none;
     font-size: 14px;
     color: #000000;
     font-family: OpenSans-Bold, sans-serif;
 }
 
-.list-column a:hover {
+.list-column .list-column__link:hover {
     color: #b59f5b;
 }
 
-.list-column li {
+.list-column .list-column__element {
     display: flex;
-    position: relative;
-    padding-bottom: 18px;
 }
 
-.list-column li:not(:first-of-type) {
-    padding-top: 12px;
+.list-column__element {
+    width: 100%;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 16px;
 }
 
-.list-column p:after {
-    content: "";
-    display: inline-block;
-    width: 271px;
-    height: 1px;
-    background-color: #eeeeee;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.list-column__element:not(:last-of-type) {
+    margin-bottom: 16px;
 }
 
-.list-column span {
+.list-column .total-theme {
     font-size: 12px;
     font-family: OpenSans-Bold, sans-serif;
     color: #b59f5b;
     margin-left: 4px;
+    top: -4px;
+}
+
+.total-theme {
     position: relative;
-    top: -5px;
 }
 
 .title-production {
@@ -592,7 +582,7 @@
     flex-direction: column;
 }
 
-.card-img img {
+.card-img .basic-img-card {
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -621,12 +611,12 @@
     color: #0f0d0e;
 }
 
-.cart-text a {
+.cart-text .cart-text-link {
     color: #b59f5b;
     text-decoration: none;
 }
 
-.cart-text a:hover {
+.cart-text .cart-text-link:hover {
     text-decoration: underline;
 }
 
@@ -652,25 +642,19 @@
     color: #0f0d0e;
     font-size: 20px;
     position: relative;
-    margin-top: 49px;
+    margin-top: 42px;
 }
 
-.price_сut-low::before {
-    content: "500 ₽";
-    position: absolute;
+.price_changed {
+    margin-top: 16px;
+}
+
+.old-price{
     font-family: OpenSans-Bold, sans-serif;
     font-size: 14px;
     text-decoration: line-through;
-    margin-top: -15px;
-}
-
-.price_сut-big::before {
-    content: "1000 ₽";
-    position: absolute;
-    font-family: OpenSans-Bold, sans-serif;
-    font-size: 14px;
-    text-decoration: line-through;
-    margin-top: -15px;
+    position: relative;
+    top: 3px;
 }
 
 .link-card {
@@ -710,13 +694,13 @@
     padding-bottom: 32px;
 }
 
-.footer-links a {
+.footer-links .social-icon {
     display: block;
     width: 20px;
     height: 20px;
 }
 
-.footer-links li {
+.footer-links .footer-links__element:not(:last-of-type) {
     margin-right: 28px;
 }
 
@@ -791,6 +775,8 @@
     margin: 0;
     right: 0;
     top: -25px;
+    background-color: transparent;
+    border: none;
 }
 
 .pop-up__container {
@@ -991,7 +977,7 @@
         display: none;
     }
 
-    .logo-menu nav {
+    .logo-menu .navigation {
         background-image: url("../svg/burger-menu-svgrepo-com.svg");
         width: 33px;
         height: 29px;
@@ -1142,7 +1128,7 @@
         display: none;
     }
 
-    .logo-menu nav {
+    .logo-menu .navigation {
         background-image: url("../svg/burger-menu-svgrepo-com.svg");
         width: 33px;
         height: 29px;
@@ -1211,7 +1197,7 @@
         max-width: 100%;
     }
 
-    .search input {
+    .search .search-input-information {
         width: 100%;
     }
 
